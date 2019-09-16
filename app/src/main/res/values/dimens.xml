@@ -3,6 +3,6 @@
     <dimen name="spacing">16dp</dimen>
     <dimen name="typeBread">50dp</dimen>
     <dimen name="subTextSize">20sp</dimen>
-    <dimen name="choiceTextSize">10sp</dimen>
+    <dimen name="choiceTextSize">15sp</dimen>
 
 </resources>

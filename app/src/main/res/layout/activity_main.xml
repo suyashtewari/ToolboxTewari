@@ -7,6 +7,27 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/imageChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing"
+        android:layout_marginBottom="192dp"
+        android:text="Change Picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nextPage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing"
+        android:layout_marginBottom="@dimen/spacing"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <ImageView
         android:id="@+id/subwayImage"
         android:layout_width="150dp"
@@ -21,30 +42,6 @@
         app:layout_constraintEnd_toStartOf="@+id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="86dp"
-        android:text="Order"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/subwayImage"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/breadType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing"
-        android:layout_marginTop="50dp"
-        android:text="Type of Bread:"
-        android:textSize="@dimen/subTextSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subwayImage" />
 
     <RadioGroup
         android:id="@+id/breadChoices"
@@ -100,6 +97,24 @@
 
     </RadioGroup>
 
+    <Spinner
+        android:id="@+id/sandwichChoices"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        app:layout_constraintStart_toStartOf="@+id/sandwichType"
+        app:layout_constraintTop_toBottomOf="@+id/sandwichType" />
+
+    <Switch
+        android:id="@+id/toasted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="20dp"
+        android:text="Toasted?"
+        app:layout_constraintBottom_toBottomOf="@+id/imageChange"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/sandwichType"
         android:layout_width="wrap_content"
@@ -113,13 +128,28 @@
         app:layout_constraintStart_toEndOf="@+id/breadType"
         app:layout_constraintTop_toBottomOf="@+id/subwayImage" />
 
-    <Spinner
-        android:id="@+id/sandwichChoices"
+    <TextView
+        android:id="@+id/breadType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        app:layout_constraintStart_toStartOf="@+id/sandwichType"
-        app:layout_constraintTop_toBottomOf="@+id/sandwichType" />
+        android:layout_marginStart="@dimen/spacing"
+        android:layout_marginTop="50dp"
+        android:text="Type of Bread:"
+        android:textSize="@dimen/subTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subwayImage" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="86dp"
+        android:text="Order"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subwayImage"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
