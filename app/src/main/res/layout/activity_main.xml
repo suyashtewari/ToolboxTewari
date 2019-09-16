@@ -6,15 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/subwayImage"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="117dp"
         android:scaleType="fitXY"
         android:src="@drawable/subway_logo"
+        app:layout_constraintBottom_toTopOf="@+id/breadType"
         app:layout_constraintEnd_toStartOf="@+id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,14 +26,100 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="86dp"
         android:text="Order"
-
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/subwayImage"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/breadType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing"
+        android:layout_marginTop="50dp"
+        android:text="Type of Bread:"
+        android:textSize="@dimen/subTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subwayImage" />
+
+    <RadioGroup
+        android:id="@+id/breadChoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing"
+        android:layout_marginTop="@dimen/spacing"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breadType"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/nine_grain_wheat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing"
+            android:text="@string/wheat"
+            android:textSize="@dimen/choiceTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breadChoices" />
+
+        <RadioButton
+            android:id="@+id/nine_grain_honey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing"
+            android:text="@string/honey_oat"
+            android:textSize="@dimen/choiceTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nine_grain_wheat" />
+
+        <RadioButton
+            android:id="@+id/italian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing"
+            android:text="@string/italian"
+            android:textSize="@dimen/choiceTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nine_grain_honey" />
+
+        <RadioButton
+            android:id="@+id/flat_bread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing"
+            android:text="@string/flat_bread"
+            android:textSize="@dimen/choiceTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/italian" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/sandwichType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="68dp"
+        android:text="Type of Sandwiches:"
+        android:textSize="@dimen/subTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/breadType"
+        app:layout_constraintTop_toBottomOf="@+id/subwayImage" />
+
+    <Spinner
+        android:id="@+id/sandwichChoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        app:layout_constraintStart_toStartOf="@+id/sandwichType"
+        app:layout_constraintTop_toBottomOf="@+id/sandwichType" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

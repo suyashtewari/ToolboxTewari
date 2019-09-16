@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ToolboxTewari</string>
+
+    <!-- type of bread -->
+    <string name="wheat">9-Grain Wheat</string>
+    <string name="honey_oat">9-Grain Honey Oat</string>
+    <string name="italian">Italian</string>
+    <string name="flat_bread">Flat Bread</string>
+
+    <string-array name="sandwichChoices">
+        <item>Ham</item>
+        <item>Oven Roasted Chicken</item>
+        <item>Sweet Onion Chicken Teriyaki</item>
+        <item>Veggie Delite</item>
+    </string-array>
+
 </resources>
