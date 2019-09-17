@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_1"
     tools:context=".MainActivity">
 
 
@@ -16,16 +17,6 @@
         android:text="Change Picture"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/nextPage1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/spacing"
-        android:layout_marginBottom="@dimen/spacing"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <ImageView
@@ -59,7 +50,6 @@
             android:id="@+id/nine_grain_wheat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing"
             android:text="@string/wheat"
             android:textSize="@dimen/choiceTextSize"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +91,7 @@
         android:id="@+id/sandwichChoices"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="@dimen/spacing"
         app:layout_constraintStart_toStartOf="@+id/sandwichType"
         app:layout_constraintTop_toBottomOf="@+id/sandwichType" />
@@ -110,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="12dp"
         android:text="Toasted?"
         app:layout_constraintBottom_toBottomOf="@+id/imageChange"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -145,11 +136,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="86dp"
+        android:layout_marginBottom="568dp"
         android:text="Order"
         android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/subwayImage"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="89dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/spacing"
+        android:layout_marginBottom="@dimen/spacing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/next_image" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_2"
+    tools:context=".CheckboxActivity">
+
+    <CheckBox
+        android:id="@+id/bbq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/bbq"
+        app:layout_constraintStart_toStartOf="@+id/sweet"
+        app:layout_constraintTop_toBottomOf="@+id/sweet" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="Choose Vegetables and Condiments:"
+        android:textSize="@dimen/subTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/lettuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/lettuce"
+        app:layout_constraintStart_toStartOf="@+id/title2"
+        app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+    <CheckBox
+        android:id="@+id/cucumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/cucumber"
+        app:layout_constraintStart_toStartOf="@+id/lettuce"
+        app:layout_constraintTop_toBottomOf="@+id/lettuce" />
+
+    <CheckBox
+        android:id="@+id/tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/tomato"
+        app:layout_constraintStart_toStartOf="@+id/cucumber"
+        app:layout_constraintTop_toBottomOf="@+id/cucumber" />
+
+    <CheckBox
+        android:id="@+id/onion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/onion"
+        app:layout_constraintStart_toStartOf="@+id/tomato"
+        app:layout_constraintTop_toBottomOf="@+id/tomato" />
+
+    <CheckBox
+        android:id="@+id/pickle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/pickle"
+        app:layout_constraintStart_toStartOf="@+id/onion"
+        app:layout_constraintTop_toBottomOf="@+id/onion" />
+
+    <CheckBox
+        android:id="@+id/pepper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/pepper"
+        app:layout_constraintStart_toStartOf="@+id/pickle"
+        app:layout_constraintTop_toBottomOf="@+id/pickle" />
+
+    <CheckBox
+        android:id="@+id/olive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/olive"
+        app:layout_constraintStart_toStartOf="@+id/pepper"
+        app:layout_constraintTop_toBottomOf="@+id/pepper" />
+
+    <CheckBox
+        android:id="@+id/jalapeno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/jalapeno"
+        app:layout_constraintStart_toStartOf="@+id/olive"
+        app:layout_constraintTop_toBottomOf="@+id/olive" />
+
+    <!-- condiments -->
+    <CheckBox
+        android:id="@+id/ranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:layout_marginEnd="100dp"
+        android:text="@string/ranch"
+        app:layout_constraintEnd_toEndOf="@+id/title2"
+        app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+    <CheckBox
+        android:id="@+id/chipotle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/chipotle"
+        app:layout_constraintStart_toStartOf="@+id/ranch"
+        app:layout_constraintTop_toBottomOf="@+id/ranch" />
+
+    <CheckBox
+        android:id="@+id/honey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/honey"
+        app:layout_constraintStart_toStartOf="@+id/chipotle"
+        app:layout_constraintTop_toBottomOf="@+id/chipotle" />
+
+    <CheckBox
+        android:id="@+id/mayo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/mayo"
+        app:layout_constraintStart_toStartOf="@+id/honey"
+        app:layout_constraintTop_toBottomOf="@+id/honey" />
+
+    <CheckBox
+        android:id="@+id/sweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:text="@string/sweet"
+        app:layout_constraintStart_toStartOf="@+id/mayo"
+        app:layout_constraintTop_toBottomOf="@+id/mayo" />
+
+    <ImageButton
+        android:id="@+id/next_two"
+        android:layout_width="89dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="623dp"
+        android:layout_marginEnd="@dimen/spacing"
+        android:layout_marginBottom="@dimen/spacing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title2"
+        app:srcCompat="@drawable/next_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,10 +2,14 @@ package com.example.toolboxtewari;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-        import android.os.Bundle;
+import android.content.Intent;
+import android.media.Image;
+import android.os.Bundle;
         import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -14,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     ImageView subwayImage;
     Spinner spinner;
+    Button changeImage;
+    ImageButton next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +28,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         subwayImage = (ImageView) findViewById(R.id.subwayImage);
         spinner = (Spinner) findViewById(R.id.sandwichChoices);
+        changeImage = (Button) findViewById(R.id.imageChange);
+        next = (ImageButton) findViewById(R.id.next);
+
+        //Intent intent = new Intent(this, CheckboxActivity.class);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CheckboxActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        changeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //https://teamtreehouse.com/community/how-do-i-change-an-imageview-another-image
+
+                subwayImage.setImageResource(R.drawable.eat_fresh);
+            }
+        });
 
         subwayImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Subway", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Subway", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -34,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 "Ham", "Oven Roasted Chicken", "Sweet Onion Chicken Teriyaki", "Veggie Delite"
         };
 
+        //https://www.youtube.com/watch?v=on_OrrX7Nw4
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this, R.layout.spinner_item, sandwichChoices);
 
@@ -52,4 +80,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+    //radiogroup = https://www.youtube.com/watch?v=fwSJ1OkK304&t=82s
 }
