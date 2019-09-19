@@ -56,6 +56,8 @@ public class DisplayActivity extends AppCompatActivity {
 
         display.setText(strToDisplay);
 
+        //123
+
 
 
     }

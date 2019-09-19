@@ -66,6 +66,7 @@ public class CheckboxActivity extends AppCompatActivity {
                 intent.putExtra("toasted", toasted);
 
                 startActivity(intent);
+                //123
             }
         });
 
