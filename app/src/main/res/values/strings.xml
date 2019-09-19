@@ -10,17 +10,11 @@
     <string name="cucumber">Cucumbers</string>
     <string name="tomato">Tomatoes</string>
     <string name="onion">Onions</string>
-    <string name="pickle">Pickles</string>
-    <string name="pepper">Peppers</string>
-    <string name="olive">Olives</string>
-    <string name="jalapeno">Jalapenos</string>
 
     <string name="ranch">Ranch</string>
     <string name="chipotle">Chipotle Southwest</string>
     <string name="honey">Honey Mustard</string>
     <string name="mayo">Mayonnaise</string>
-    <string name="sweet">Sweet Onion</string>
-    <string name="bbq">BBQ</string>
 
     <string-array name="sandwichChoices">
         <item>Ham</item>

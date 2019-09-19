@@ -11,7 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -20,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Spinner spinner;
     Button changeImage;
     ImageButton next;
+    RadioGroup typeOfBread;
+    RadioButton selectedBread;
+    Switch toasted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +36,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner = (Spinner) findViewById(R.id.sandwichChoices);
         changeImage = (Button) findViewById(R.id.imageChange);
         next = (ImageButton) findViewById(R.id.next);
+        typeOfBread = (RadioGroup) findViewById(R.id.breadChoices);
+        toasted = (Switch) findViewById(R.id.toasted);
 
         //Intent intent = new Intent(this, CheckboxActivity.class);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int radioId = typeOfBread.getCheckedRadioButtonId();
+                selectedBread = findViewById(radioId);
+                String breadString = selectedBread.getText().toString();
+
+                String sandwichString = spinner.getSelectedItem().toString();
+
+                boolean toastedBool = toasted.isChecked();
+
                 Intent intent = new Intent(MainActivity.this, CheckboxActivity.class);
+
+                intent.putExtra(DisplayActivity.BREAD, breadString);
+                intent.putExtra(DisplayActivity.TYPE, sandwichString);
+                intent.putExtra("toasted", toastedBool);
+
                 startActivity(intent);
             }
         });

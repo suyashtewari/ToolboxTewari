@@ -7,15 +7,6 @@
     android:background="@drawable/gradient_2"
     tools:context=".CheckboxActivity">
 
-    <CheckBox
-        android:id="@+id/bbq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        android:text="@string/bbq"
-        app:layout_constraintStart_toStartOf="@+id/sweet"
-        app:layout_constraintTop_toBottomOf="@+id/sweet" />
-
     <TextView
         android:id="@+id/title2"
         android:layout_width="wrap_content"
@@ -63,42 +54,6 @@
         app:layout_constraintStart_toStartOf="@+id/tomato"
         app:layout_constraintTop_toBottomOf="@+id/tomato" />
 
-    <CheckBox
-        android:id="@+id/pickle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        android:text="@string/pickle"
-        app:layout_constraintStart_toStartOf="@+id/onion"
-        app:layout_constraintTop_toBottomOf="@+id/onion" />
-
-    <CheckBox
-        android:id="@+id/pepper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        android:text="@string/pepper"
-        app:layout_constraintStart_toStartOf="@+id/pickle"
-        app:layout_constraintTop_toBottomOf="@+id/pickle" />
-
-    <CheckBox
-        android:id="@+id/olive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        android:text="@string/olive"
-        app:layout_constraintStart_toStartOf="@+id/pepper"
-        app:layout_constraintTop_toBottomOf="@+id/pepper" />
-
-    <CheckBox
-        android:id="@+id/jalapeno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        android:text="@string/jalapeno"
-        app:layout_constraintStart_toStartOf="@+id/olive"
-        app:layout_constraintTop_toBottomOf="@+id/olive" />
-
     <!-- condiments -->
     <CheckBox
         android:id="@+id/ranch"
@@ -136,15 +91,6 @@
         android:text="@string/mayo"
         app:layout_constraintStart_toStartOf="@+id/honey"
         app:layout_constraintTop_toBottomOf="@+id/honey" />
-
-    <CheckBox
-        android:id="@+id/sweet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
-        android:text="@string/sweet"
-        app:layout_constraintStart_toStartOf="@+id/mayo"
-        app:layout_constraintTop_toBottomOf="@+id/mayo" />
 
     <ImageButton
         android:id="@+id/next_two"
